@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>省钱控</title>
+    <!--引用bootstrap样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!--引用样式重置文件-->
+    <link rel="stylesheet" href="./css/base.css"/>
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet" href="css/yy-savemoney.css"/>
+    <!--引用less.js-->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<!--头部区域-->
+<a name="jumptop"></a>
+<header class="head" id="top">
+    <div class="h-back">
+        <a href="./index.html" class="glyphicon glyphicon-menu-left"></a>
+    </div>
+    <h3>历史价格查询</h3>
+    <div class="appDown">
+        <a href="javascrip:;"></i></a>
+    </div>
+    <a href="javascript:;"><img src="./images/APPDownload.png" class="fixDownLoad" alt=""/></a>
+</header>
+
+
+
+<!--列表区域-->
+    <div id="container">
+        <div class="y-list" id="listdiv">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+<!--翻页区域-->
+
+<div id="changed">
+    <a href="javascript:void(0)" class="previous fl ">
+        上一页
+    </a>
+    <select name="" id="yyChoose">
+
+    </select>
+    <a href="javascript:void(0)" class="next fr ">
+        下一页
+    </a>
+</div>
+
+<!--点击跳转-->
+<div id="jump">
+    <a href="./index.html" class="first">首页</a>
+    <span>&gt;</span>
+    <a href="#jumptop" class="up">省钱控</a>
+</div>
+
+<footer>
+    <row class="clearfix yy-f">
+        <a class="col-xs-4 deng" href="javascript:;">登录</a>
+        <a class="col-xs-4 zhu" href="yy_zhuce.html">注册</a>
+        <a class="col-xs-4" href="#jumptop"><i></i>回到顶部</a>
+    </row>
+    <div class="ban"></div>
+</footer>
+
+</body>
+<!--省钱控列表的模板-->
+<script type="text/template" id="savaMoneyTpl">
+    <% for(var i=0; i<result.length ; i++){ %>
+        <a href="yy_zhekoushangpin.html?productId=<%= result[i].productId %>" class="clearfix">
+            <li>
+                <div class="pic">
+                    <%=# result[i].productImgSm %>
+                </div>
+                <div class="yytitle">
+                    <%= result[i].productName %>
+                    <span>
+                        <%= result[i].productPinkage %>
+                    </span>
+                </div>
+                <div class="yyother">
+                    <span class="buy">
+                        <%= result[i].productFrom+' | '+result[i].productTime %>
+                    </span>
+                    <span class="message">
+                        <i class="iconfont">&#xe6f2;</i>
+                        <%= getNum(result[i].productComCount) %>
+                    </span>
+                </div>
+            </li>
+        </a>
+    <% } %>
+
+</script>
+
+<!--选择页面的模板-->
+<!--<script type="text/template" id="choosedTpl">-->
+
+<!--</script>-->
+
+
+
+
+<!--引包-->
+<script src="./lib/jquery/jquery-1.12.2.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/template/template-native.js"></script>
+<!--js代码-->
+<script src="js/yy_savemoney.js"></script>
+</html>

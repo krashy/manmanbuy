@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>查历史价</title>
+    <!--引入bootstrap样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <!-- 引入base.css文件 清除默认样式-->
+    <link rel="stylesheet" href="./css/base.css"/>
+    <!-- 引入自己的css样式 如果是less rel属性要写成样式-->
+    <link rel="stylesheet/less" href="./css/category.less"/>
+    <!--因为使用了less 所以要引入/less.min.js这个js文件-->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<div class="layout">
+
+    <!--头部部分 B-->
+    <header class="head" id="top">
+        <div class="h-back">
+            <a href="./index.html" class="glyphicon glyphicon-menu-left"></a>
+        </div>
+        <h3>历史价格查询</h3>
+        <div class="appDown">
+            <a href="javascrip:;"></i></a>
+        </div>
+    </header>
+    <!-- 头部部分 E-->
+
+    <!-- 主体部分 B-->
+    <div class="main">
+       <div class="form">
+           <p>商品链接</p>
+          <div contenteditable=true class="textarea">
+              请通过购买App中使用分享或浏览器打开商品页面获取商品连接
+          </div>
+       </div>
+        <div class="button">
+            <input type="submit" value="查询历史价格"/>
+            <button>重置</button>
+        </div>
+        <div class="explain">
+            <h4>两步操作即可识别商品真假促销</h4>
+            <p>1.打开购物APP（如手机淘宝）复制商品链接</p>
+            <p>2.打开慢慢买APP，系统自动识别查历史价</p>
+        </div>
+    </div>
+    <!-- 主体部分 E-->
+
+    <!-- 底部部分 B-->
+    <div class="foot"id="foot">
+        <a href="javascript:;" class="close" id="close"><i></i></a>
+        <i class="iconMan"></i>
+        <p class="title">慢慢买</p>
+        <p>全网比价 历史价格查询</p>
+        <a href="javascript;" class="open">立即打开</a>
+    </div>
+    <!-- 底部部分 E-->
+
+</div>
+</body>
+<!--引入jquery文件-->
+<script src="./lib/jquery/jquery-1.12.2.min.js"></script>
+<!--引入bootstrap的js文件-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引入模板引擎的js文件 该文件的模板是以 <%%> 来书写的-->
+<script src="./lib/template/template-native.js"></script>
+<!--引入自己的js文件-->
+<script src="./js/category.js"></script>
+</html>
